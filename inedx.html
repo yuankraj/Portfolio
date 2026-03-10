@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishal Singh | Cybersecurity & Developer</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
+
+header{
+background:#020617;
+padding:20px;
+position:fixed;
+width:100%;
+top:0;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1100px;
+margin:auto;
+}
+
+nav h1{
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:80px;
+}
+
+.hero h2{
+font-size:45px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
+h2.section-title{
+text-align:center;
+margin-bottom:40px;
+color:#38bdf8;
+}
+
+.about p{
+text-align:center;
+font-size:18px;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.project-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+.project-card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+}
+
+button{
+background:#38bdf8;
+border:none;
+padding:10px 20px;
+color:black;
+font-weight:bold;
+border-radius:5px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<h1>Vishal Singh</h1>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+
+<section class="hero">
+
+<div>
+<h2>Hello, I'm <span>Vishal Singh</span></h2>
+<p>B.Tech Student | Cybersecurity Enthusiast | Python Developer</p>
+<br>
+<button onclick="window.location='#contact'">Hire Me</button>
+</div>
+
+</section>
+
+
+<section id="about" class="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p>
+
+I am a B.Tech Computer Science student passionate about Cybersecurity,
+Ethical Hacking, and Web Development.
+
+Currently learning Python, Django, Flask and exploring penetration
+testing tools like Metasploit.
+
+I enjoy solving Capture The Flag (CTF) challenges and building
+projects that improve my security and development skills.
+
+My goal is to become a professional Cybersecurity Engineer
+and contribute to building secure digital systems.
+
+</p>
+
+</section>
+
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill-card">
+<h3>Python</h3>
+<p>Automation, scripting, backend development</p>
+</div>
+
+<div class="skill-card">
+<h3>Django</h3>
+<p>Web application backend framework</p>
+</div>
+
+<div class="skill-card">
+<h3>Flask</h3>
+<p>Lightweight API development</p>
+</div>
+
+<div class="skill-card">
+<h3>Linux</h3>
+<p>System administration and CLI tools</p>
+</div>
+
+<div class="skill-card">
+<h3>Cybersecurity</h3>
+<p>Penetration testing & CTF challenges</p>
+</div>
+
+<div class="skill-card">
+<h3>Metasploit</h3>
+<p>Exploitation framework for security testing</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>A personal portfolio website built using HTML and CSS.</p>
+</div>
+
+<div class="project-card">
+<h3>CTF Writeups</h3>
+<p>Solutions and analysis of Capture The Flag challenges.</p>
+</div>
+
+<div class="project-card">
+<h3>Linux Automation Scripts</h3>
+<p>Python scripts to automate Linux tasks and security tools.</p>
+</div>
+
+<div class="project-card">
+<h3>Cybersecurity Lab</h3>
+<p>Practice environment using Kali Linux and vulnerable machines.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<p>Email: your-email@example.com</p>
+<p>LinkedIn: linkedin.com/in/yourprofile</p>
+<p>GitHub: github.com/yourusername</p>
+
+<br>
+
+<button>Email Me</button>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Vishal Singh | Portfolio Website</p>
+
+</footer>
+
+</body>
+</html>
