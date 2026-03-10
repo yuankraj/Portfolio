@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vishal Singh | Cybersecurity & Developer</title>
+<title>Vishal Kumar | DevOps & Cloud Engineer</title>
 
 <style>
 
@@ -11,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
@@ -22,122 +22,77 @@ line-height:1.6;
 
 header{
 background:#020617;
-padding:20px;
-position:fixed;
-width:100%;
-top:0;
+padding:60px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+header h2{
+color:#38bdf8;
+font-weight:normal;
+margin-bottom:10px;
+}
+
+header p{
+color:#94a3b8;
 }
 
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-max-width:1100px;
-margin:auto;
+margin-top:20px;
 }
 
-nav h1{
-color:#38bdf8;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-}
-
-nav ul li{
-margin-left:20px;
-}
-
-nav ul li a{
+nav a{
 color:white;
+margin:0 12px;
 text-decoration:none;
 font-weight:bold;
 }
 
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding-top:80px;
-}
-
-.hero h2{
-font-size:45px;
-}
-
-.hero span{
+nav a:hover{
 color:#38bdf8;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
 }
 
 section{
-max-width:1100px;
-margin:auto;
-padding:80px 20px;
+margin-bottom:50px;
 }
 
-h2.section-title{
-text-align:center;
-margin-bottom:40px;
+h3{
 color:#38bdf8;
+margin-bottom:20px;
 }
 
-.about p{
-text-align:center;
-font-size:18px;
-}
-
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.skill-card{
-background:#1e293b;
+.card{
+background:#020617;
 padding:20px;
-border-radius:10px;
-text-align:center;
+border-radius:8px;
+margin-bottom:20px;
+border:1px solid #1e293b;
 }
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.project-card{
+.skills span{
+display:inline-block;
 background:#1e293b;
-padding:20px;
-border-radius:10px;
-}
-
-.project-card h3{
-color:#38bdf8;
-margin-bottom:10px;
-}
-
-.contact{
-text-align:center;
+padding:8px 12px;
+margin:5px;
+border-radius:6px;
+font-size:14px;
 }
 
 footer{
+background:#020617;
 text-align:center;
 padding:20px;
-background:#020617;
-margin-top:40px;
-}
-
-button{
-background:#38bdf8;
-border:none;
-padding:10px 20px;
-color:black;
-font-weight:bold;
-border-radius:5px;
-cursor:pointer;
+color:#94a3b8;
 }
 
 </style>
@@ -146,91 +101,148 @@ cursor:pointer;
 <body>
 
 <header>
+
+<h1>Vishal Kumar</h1>
+
+<h2>DevOps Engineer | Cloud Engineer | Cybersecurity Enthusiast</h2>
+
+<p>
+Linux • Git • Docker • Jenkins • Kubernetes • ArgoCD • Terraform • Ansible • AWS • SRE • Observability • Agentic AI
+</p>
+
+<p>
+B.Tech Cyber Security Student (6th Semester)<br>
+Parul University – Vadodara, Gujarat, India
+</p>
+
+<p>#OPEN_TO_WORK</p>
+
 <nav>
-
-<h1>Vishal Singh</h1>
-
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#achievements">Achievements</a>
+<a href="#posts">LinkedIn Highlights</a>
+<a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 
-<section class="hero">
+<div class="container">
 
-<div>
-<h2>Hello, I'm <span>Vishal Singh</span></h2>
-<p>B.Tech Student | Cybersecurity Enthusiast | Python Developer</p>
-<br>
-<button onclick="window.location='#contact'">Hire Me</button>
-</div>
+<section id="about">
 
-</section>
+<h3>About</h3>
 
-
-<section id="about" class="about">
-
-<h2 class="section-title">About Me</h2>
+<div class="card">
 
 <p>
-
-I am a B.Tech Computer Science student passionate about Cybersecurity,
-Ethical Hacking, and Web Development.
-
-Currently learning Python, Django, Flask and exploring penetration
-testing tools like Metasploit.
-
-I enjoy solving Capture The Flag (CTF) challenges and building
-projects that improve my security and development skills.
-
-My goal is to become a professional Cybersecurity Engineer
-and contribute to building secure digital systems.
-
+I am a Cyber Security student with a strong focus on Penetration Testing and Cloud Security while also expanding my expertise in Cloud Engineering and DevOps practices.
 </p>
+
+<p>
+With a strong foundation in Linux, networking, and Python programming, I have developed a solid understanding of both security fundamentals and system administration.
+</p>
+
+<p>
+My journey in cloud computing focuses on AWS services including EC2, S3, IAM, VPC, CloudFront, and Route53 to design and manage scalable infrastructures.
+</p>
+
+<p>
+Alongside cloud security, I work with CI/CD pipelines, Infrastructure as Code using Terraform, and containerization with Docker and Kubernetes.
+</p>
+
+<p>
+My goal is to bridge penetration testing expertise with cloud engineering to design and secure scalable cloud infrastructures.
+</p>
+
+</div>
 
 </section>
 
 
 <section id="skills">
 
-<h2 class="section-title">Skills</h2>
+<h3>Technical Skills</h3>
 
-<div class="skills">
+<div class="card skills">
 
-<div class="skill-card">
-<h3>Python</h3>
-<p>Automation, scripting, backend development</p>
+<span>AWS</span>
+<span>Cloud Computing</span>
+<span>Docker</span>
+<span>Kubernetes</span>
+<span>Terraform</span>
+<span>ArgoCD</span>
+<span>Jenkins</span>
+<span>CI/CD</span>
+<span>Linux</span>
+<span>Python</span>
+<span>Penetration Testing</span>
+<span>Metasploit</span>
+<span>Burp Suite</span>
+<span>Networking</span>
+<span>SQL</span>
+<span>Cyber Security</span>
+<span>Vulnerability Assessment</span>
+<span>Ethical Hacking</span>
+
 </div>
 
-<div class="skill-card">
-<h3>Django</h3>
-<p>Web application backend framework</p>
+</section>
+
+
+<section id="experience">
+
+<h3>Experience</h3>
+
+<div class="card">
+
+<h4>Course Instructor – ST7 Surveillance Solutions</h4>
+
+<p>Feb 2024 – May 2024 (Remote)</p>
+
+<p>
+Delivered training sessions on Cybersecurity and Cybercrime Investigation.
+</p>
+
 </div>
 
-<div class="skill-card">
-<h3>Flask</h3>
-<p>Lightweight API development</p>
+<div class="card">
+
+<h4>Cyber Security Specialist – Trainee</h4>
+
+<p>EDUCONF Technologies Pvt Ltd</p>
+
+<p>Dec 2021 – Apr 2023</p>
+
+<p>
+Worked on Ethical Hacking, Cyber Defense, Network Security, Vulnerability Assessment and Penetration Testing.
+</p>
+
 </div>
 
-<div class="skill-card">
-<h3>Linux</h3>
-<p>System administration and CLI tools</p>
-</div>
+</section>
 
-<div class="skill-card">
-<h3>Cybersecurity</h3>
-<p>Penetration testing & CTF challenges</p>
-</div>
 
-<div class="skill-card">
-<h3>Metasploit</h3>
-<p>Exploitation framework for security testing</p>
-</div>
+<section id="education">
+
+<h3>Education</h3>
+
+<div class="card">
+
+<h4>Parul University</h4>
+
+<p>Bachelor of Technology (B.Tech) – Cyber Security</p>
+
+<p>2023 – 2027</p>
+
+<p>
+Key Areas: Penetration Testing, Python, Networking, Cloud Computing, DevOps
+</p>
 
 </div>
 
@@ -239,53 +251,134 @@ and contribute to building secure digital systems.
 
 <section id="projects">
 
-<h2 class="section-title">Projects</h2>
+<h3>Projects</h3>
 
-<div class="projects">
-
-<div class="project-card">
-<h3>Portfolio Website</h3>
-<p>A personal portfolio website built using HTML and CSS.</p>
+<div class="card">
+<h4>GitOps E-Commerce Deployment using ArgoCD</h4>
+<p>Deployed an online shop application on AWS EC2 using Kubernetes and ArgoCD following GitOps workflow.</p>
 </div>
 
-<div class="project-card">
-<h3>CTF Writeups</h3>
-<p>Solutions and analysis of Capture The Flag challenges.</p>
+<div class="card">
+<h4>CI/CD Pipeline – GitLab + Docker + AWS</h4>
+<p>Created a complete CI/CD pipeline for a Node.js Todo application using GitLab Runner, Docker and AWS EC2.</p>
 </div>
 
-<div class="project-card">
-<h3>Linux Automation Scripts</h3>
-<p>Python scripts to automate Linux tasks and security tools.</p>
+<div class="card">
+<h4>Dockerized Flask + MySQL Application</h4>
+<p>Built a containerized full-stack application using Flask backend and MySQL database orchestrated with Docker Compose.</p>
 </div>
 
-<div class="project-card">
-<h3>Cybersecurity Lab</h3>
-<p>Practice environment using Kali Linux and vulnerable machines.</p>
+<div class="card">
+<h4>Node.js To-Do API on AWS ECS Fargate</h4>
+<p>Developed and deployed a microservice using Docker, AWS ECR, ECS Fargate and CloudWatch logs.</p>
 </div>
+
+</section>
+
+
+<section id="certifications">
+
+<h3>Certifications</h3>
+
+<div class="card">
+
+<p>Oracle Cloud Infrastructure 2025 Certified DevOps Professional</p>
+<p>AWS Educate – Introduction to Generative AI</p>
+<p>AWS Educate – Introduction to Cloud 101</p>
+<p>ISO 27001 Lead Implementer – Information Security</p>
+<p>Palo Alto Networks – Cybersecurity Foundation</p>
+<p>Linux for DevOps Masterclass – TrainWithShubham</p>
+<p>Computer Networking Masterclass – TrainWithShubham</p>
 
 </div>
 
 </section>
 
 
-<section id="contact" class="contact">
+<section id="achievements">
 
-<h2 class="section-title">Contact</h2>
+<h3>Achievements</h3>
 
-<p>Email: your-email@example.com</p>
-<p>LinkedIn: linkedin.com/in/yourprofile</p>
-<p>GitHub: github.com/yourusername</p>
+<div class="card">
 
-<br>
+<p>🥈 2nd Place – AWS Students Community Day 2025 Quiz</p>
+<p>Finalist – ECHELON 2K26 Cybersecurity × AI Hackathon</p>
+<p>Participant – RootAccess CTF 2026</p>
+<p>Participant – CREST CTF 2026</p>
+<p>Participant – KJSSE CTF 3.0</p>
 
-<button>Email Me</button>
+</div>
 
 </section>
 
+
+<section id="posts">
+
+<h3>LinkedIn Highlights</h3>
+
+<div class="card">
+<h4>CTF Journey – KJSSE CTF 3.0</h4>
+<p>Participated in cybersecurity challenges including cryptography, web exploitation, digital forensics and reverse engineering.</p>
+</div>
+
+<div class="card">
+<h4>CREST CTF 2026</h4>
+<p>National-level cybersecurity challenge exploring real-world security scenarios.</p>
+</div>
+
+<div class="card">
+<h4>ECHELON 2K26 Hackathon Finalist</h4>
+<p>Selected as finalist in Cybersecurity × AI hackathon organized by SVNIT Surat.</p>
+</div>
+
+<div class="card">
+<h4>AWS Students Community Day 2025</h4>
+<p>Secured 2nd place in AWS Cloud Quiz competition at Parul University.</p>
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h3>Contact</h3>
+
+<div class="card">
+
+<p><strong>Name:</strong> Vishal Kumar</p>
+
+<p><strong>Location:</strong> Vadodara, Gujarat, India</p>
+
+<p><strong>Languages:</strong> English, Hindi</p>
+
+<p><strong>Open to roles:</strong></p>
+
+<p>
+DevOps Engineer • DevOps Consultant • Cloud Engineer • Cloud Support Engineer • AWS Engineer
+</p>
+
+<p><strong>Work Type:</strong> On-site / Hybrid / Remote</p>
+
+<p><strong>Availability:</strong> Immediately Available</p>
+
+<p><strong>Expected Salary:</strong> ₹15+ LPA</p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/yuankraj/">linkedin.com/in/yuankraj</a>
+</p>
+
+</div>
+
+</section>
+
+</div>
 
 <footer>
 
-<p>© 2026 Vishal Singh | Portfolio Website</p>
+<p>
+© 2026 Vishal Kumar | DevOps • Cloud • Cybersecurity Portfolio
+</p>
 
 </footer>
 
