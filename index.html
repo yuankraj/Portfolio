@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vishal Kumar | DevOps Engineer Portfolio</title>
 
   <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- FONT AWESOME -->
+  <!-- ICONS -->
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
   <style>
 
@@ -30,8 +25,22 @@
     body{
       font-family:'Poppins',sans-serif;
       background:#050505;
-      color:#fff;
+      color:#ffffff;
       overflow-x:hidden;
+    }
+
+    ::selection{
+      background:#ffffff;
+      color:#000;
+    }
+
+    body::-webkit-scrollbar{
+      width:10px;
+    }
+
+    body::-webkit-scrollbar-thumb{
+      background:#ffffff;
+      border-radius:10px;
     }
 
     a{
@@ -49,18 +58,11 @@
       margin:auto;
     }
 
-    ::-webkit-scrollbar{
-      width:10px;
-    }
+    /* ========================= */
+    /* ANIMATION */
+    /* ========================= */
 
-    ::-webkit-scrollbar-thumb{
-      background:#fff;
-      border-radius:20px;
-    }
-
-    /* ANIMATIONS */
-
-    @keyframes float{
+    @keyframes float {
       0%{
         transform:translateY(0px);
       }
@@ -69,6 +71,29 @@
       }
       100%{
         transform:translateY(0px);
+      }
+    }
+
+    @keyframes glow {
+      0%{
+        box-shadow:0 0 5px #fff;
+      }
+      50%{
+        box-shadow:0 0 30px #fff;
+      }
+      100%{
+        box-shadow:0 0 5px #fff;
+      }
+    }
+
+    @keyframes slideTop{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
       }
     }
 
@@ -94,23 +119,25 @@
       }
     }
 
-    @keyframes glow{
+    @keyframes pulse {
       0%{
-        box-shadow:0 0 5px #fff;
+        transform:scale(1);
       }
       50%{
-        box-shadow:0 0 25px #fff;
+        transform:scale(1.05);
       }
       100%{
-        box-shadow:0 0 5px #fff;
+        transform:scale(1);
       }
     }
 
+    /* ========================= */
     /* HEADER */
+    /* ========================= */
 
     header{
-      position:fixed;
       width:100%;
+      position:fixed;
       top:0;
       left:0;
       z-index:1000;
@@ -127,12 +154,14 @@
     }
 
     .logo{
-      font-size:30px;
+      font-size:28px;
       font-weight:800;
+      color:#fff;
+      letter-spacing:1px;
     }
 
     .logo span{
-      color:#bdbdbd;
+      color:#c7c7c7;
     }
 
     .nav-links{
@@ -142,16 +171,17 @@
 
     .nav-links a{
       color:#c5c5c5;
+      font-size:15px;
       transition:0.3s;
       position:relative;
     }
 
     .nav-links a::after{
       content:'';
+      position:absolute;
       width:0%;
       height:2px;
       background:#fff;
-      position:absolute;
       left:0;
       bottom:-5px;
       transition:0.3s;
@@ -165,15 +195,17 @@
       color:#fff;
     }
 
+    /* ========================= */
     /* HERO */
+    /* ========================= */
 
     .hero{
       min-height:100vh;
       display:flex;
       align-items:center;
-      background:linear-gradient(to right,#000,#0d0d0d,#111);
       position:relative;
       overflow:hidden;
+      background:linear-gradient(to right,#000,#0f0f0f,#111);
     }
 
     .circle{
@@ -191,10 +223,10 @@
     }
 
     .circle2{
-      width:250px;
-      height:250px;
-      bottom:5%;
-      right:-5%;
+      width:200px;
+      height:200px;
+      bottom:10%;
+      right:5%;
       animation-delay:2s;
     }
 
@@ -213,31 +245,32 @@
     .hero-text h4{
       font-size:20px;
       color:#cfcfcf;
-      margin-bottom:10px;
+      margin-bottom:15px;
     }
 
     .hero-text h1{
       font-size:75px;
       line-height:1.1;
       margin-bottom:20px;
+      font-weight:800;
     }
 
     .hero-text h1 span{
-      color:#d0d0d0;
+      color:#d4d4d4;
     }
 
     .hero-text h3{
       font-size:28px;
+      color:#bcbcbc;
       margin-bottom:25px;
-      color:#bdbdbd;
       font-weight:500;
     }
 
     .hero-text p{
-      color:#a8a8a8;
-      line-height:1.9;
+      color:#a7a7a7;
       margin-bottom:20px;
       font-size:17px;
+      line-height:1.9;
     }
 
     .hero-buttons{
@@ -250,10 +283,10 @@
     .btn{
       padding:15px 35px;
       border-radius:12px;
-      border:1px solid #fff;
       font-weight:600;
       transition:0.4s;
       display:inline-block;
+      border:1px solid #fff;
     }
 
     .btn-primary{
@@ -263,7 +296,7 @@
 
     .btn-primary:hover{
       transform:translateY(-5px);
-      animation:glow 1.5s infinite;
+      box-shadow:0 0 25px rgba(255,255,255,0.3);
     }
 
     .btn-outline{
@@ -275,23 +308,22 @@
       color:#000;
     }
 
-    /* SOCIAL */
-
     .social-icons{
+      margin-top:35px;
       display:flex;
       gap:20px;
-      margin-top:35px;
     }
 
     .social-icons a{
       width:50px;
       height:50px;
-      border-radius:50%;
       border:1px solid #333;
+      border-radius:50%;
       display:flex;
       align-items:center;
       justify-content:center;
       transition:0.4s;
+      color:#fff;
       font-size:20px;
     }
 
@@ -301,14 +333,29 @@
       transform:translateY(-8px);
     }
 
+    /* ========================= */
     /* HERO CARD */
+    /* ========================= */
 
     .hero-card{
-      background:#101010;
+      background:linear-gradient(145deg,#111,#0a0a0a);
       border:1px solid rgba(255,255,255,0.08);
       padding:40px;
       border-radius:25px;
       animation:slideRight 1s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-card::before{
+      content:'';
+      position:absolute;
+      width:250px;
+      height:250px;
+      background:rgba(255,255,255,0.05);
+      border-radius:50%;
+      top:-100px;
+      right:-100px;
     }
 
     .hero-card h2{
@@ -317,7 +364,7 @@
     }
 
     .hero-card p{
-      color:#b8b8b8;
+      color:#bdbdbd;
       line-height:1.9;
       margin-bottom:20px;
     }
@@ -330,24 +377,27 @@
     }
 
     .stat-box{
-      background:#0b0b0b;
+      background:#0f0f0f;
+      border:1px solid rgba(255,255,255,0.08);
       padding:20px;
       border-radius:15px;
       text-align:center;
-      border:1px solid rgba(255,255,255,0.08);
     }
 
     .stat-box h3{
       font-size:35px;
+      margin-bottom:5px;
     }
 
     .stat-box p{
-      margin-top:5px;
-      color:#9e9e9e;
+      margin:0;
+      color:#a5a5a5;
       font-size:14px;
     }
 
+    /* ========================= */
     /* SECTION */
+    /* ========================= */
 
     section{
       padding:120px 0;
@@ -356,6 +406,7 @@
     .section-title{
       text-align:center;
       margin-bottom:70px;
+      animation:slideTop 1s ease;
     }
 
     .section-title h2{
@@ -364,17 +415,19 @@
     }
 
     .section-title span{
-      color:#d0d0d0;
+      color:#d3d3d3;
     }
 
     .section-title p{
-      color:#9c9c9c;
+      color:#9e9e9e;
       max-width:700px;
       margin:auto;
       line-height:1.8;
     }
 
+    /* ========================= */
     /* ABOUT */
+    /* ========================= */
 
     .about{
       background:#0a0a0a;
@@ -388,9 +441,9 @@
 
     .about-card{
       background:#101010;
-      border-radius:25px;
-      padding:40px;
       border:1px solid rgba(255,255,255,0.08);
+      padding:40px;
+      border-radius:25px;
       transition:0.4s;
     }
 
@@ -400,16 +453,18 @@
     }
 
     .about-card h3{
-      font-size:28px;
+      font-size:30px;
       margin-bottom:20px;
     }
 
     .about-card p{
-      color:#b3b3b3;
+      color:#b0b0b0;
       line-height:1.9;
     }
 
+    /* ========================= */
     /* SKILLS */
+    /* ========================= */
 
     .skills-grid{
       display:grid;
@@ -419,15 +474,29 @@
 
     .skill-card{
       background:#111;
+      border:1px solid rgba(255,255,255,0.08);
       padding:35px;
       border-radius:20px;
-      border:1px solid rgba(255,255,255,0.08);
       transition:0.4s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .skill-card::before{
+      content:'';
+      position:absolute;
+      width:150px;
+      height:150px;
+      background:rgba(255,255,255,0.04);
+      border-radius:50%;
+      top:-60px;
+      right:-60px;
     }
 
     .skill-card:hover{
       transform:translateY(-10px);
       border-color:#fff;
+      animation:pulse 1.5s infinite;
     }
 
     .skill-card i{
@@ -441,11 +510,86 @@
     }
 
     .skill-card p{
-      color:#b5b5b5;
+      color:#b3b3b3;
       line-height:1.8;
     }
 
+    /* ========================= */
+    /* EXPERIENCE */
+    /* ========================= */
+
+    .timeline{
+      position:relative;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .timeline::after{
+      content:'';
+      position:absolute;
+      width:3px;
+      background:#fff;
+      top:0;
+      bottom:0;
+      left:50%;
+      margin-left:-1px;
+    }
+
+    .timeline-item{
+      padding:10px 40px;
+      position:relative;
+      width:50%;
+    }
+
+    .timeline-item::after{
+      content:'';
+      position:absolute;
+      width:25px;
+      height:25px;
+      right:-13px;
+      background:#fff;
+      border-radius:50%;
+      top:25px;
+    }
+
+    .left{
+      left:0;
+    }
+
+    .right{
+      left:50%;
+    }
+
+    .right::after{
+      left:-12px;
+    }
+
+    .timeline-content{
+      background:#111;
+      padding:30px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .timeline-content h3{
+      font-size:25px;
+      margin-bottom:10px;
+    }
+
+    .timeline-content span{
+      color:#a5a5a5;
+      font-size:14px;
+    }
+
+    .timeline-content p{
+      color:#bcbcbc;
+      margin-top:15px;
+      line-height:1.8;
+    }
+
+    /* ========================= */
     /* PROJECTS */
+    /* ========================= */
 
     .projects{
       background:#0b0b0b;
@@ -459,15 +603,29 @@
 
     .project-card{
       background:#111;
-      border-radius:25px;
-      padding:35px;
       border:1px solid rgba(255,255,255,0.08);
+      padding:35px;
+      border-radius:25px;
       transition:0.4s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .project-card::before{
+      content:'';
+      position:absolute;
+      width:250px;
+      height:250px;
+      background:rgba(255,255,255,0.03);
+      border-radius:50%;
+      top:-120px;
+      right:-100px;
     }
 
     .project-card:hover{
       transform:translateY(-10px);
       border-color:#fff;
+      box-shadow:0 0 25px rgba(255,255,255,0.08);
     }
 
     .project-card h3{
@@ -476,7 +634,7 @@
     }
 
     .project-card p{
-      color:#b5b5b5;
+      color:#b3b3b3;
       line-height:1.9;
       margin-bottom:20px;
     }
@@ -493,10 +651,83 @@
       border-radius:30px;
       border:1px solid #2a2a2a;
       font-size:13px;
-      color:#d7d7d7;
+      color:#d8d8d8;
     }
 
+    /* ========================= */
+    /* CERTIFICATIONS */
+    /* ========================= */
+
+    .cert-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .cert-card{
+      background:#101010;
+      border:1px solid rgba(255,255,255,0.08);
+      padding:35px;
+      border-radius:20px;
+      transition:0.4s;
+    }
+
+    .cert-card:hover{
+      transform:translateY(-8px);
+      border-color:#fff;
+    }
+
+    .cert-card i{
+      font-size:35px;
+      margin-bottom:20px;
+    }
+
+    .cert-card h3{
+      font-size:22px;
+      margin-bottom:15px;
+    }
+
+    .cert-card p{
+      color:#b3b3b3;
+      line-height:1.8;
+    }
+
+    /* ========================= */
+    /* ACHIEVEMENTS */
+    /* ========================= */
+
+    .achievement-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .achievement-card{
+      background:#111;
+      border-radius:20px;
+      padding:35px;
+      border:1px solid rgba(255,255,255,0.08);
+      transition:0.4s;
+    }
+
+    .achievement-card:hover{
+      transform:translateY(-10px);
+      border-color:#fff;
+    }
+
+    .achievement-card h3{
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .achievement-card p{
+      color:#bcbcbc;
+      line-height:1.9;
+    }
+
+    /* ========================= */
     /* CONTACT */
+    /* ========================= */
 
     .contact{
       background:#080808;
@@ -508,6 +739,19 @@
       border-radius:30px;
       border:1px solid rgba(255,255,255,0.08);
       text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .contact-box::before{
+      content:'';
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:rgba(255,255,255,0.03);
+      border-radius:50%;
+      top:-120px;
+      right:-120px;
     }
 
     .contact-box h2{
@@ -518,10 +762,11 @@
     .contact-box p{
       color:#bdbdbd;
       line-height:1.9;
+      margin-bottom:10px;
     }
 
     .contact-info{
-      margin-top:40px;
+      margin-top:35px;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:25px;
@@ -543,20 +788,28 @@
       margin-bottom:10px;
     }
 
+    .contact-card p{
+      margin:0;
+    }
+
+    /* ========================= */
     /* FOOTER */
+    /* ========================= */
 
     footer{
-      background:#000;
-      padding:30px 0;
+      padding:35px 0;
       text-align:center;
       border-top:1px solid rgba(255,255,255,0.08);
+      background:#000;
     }
 
     footer p{
       color:#888;
     }
 
+    /* ========================= */
     /* RESPONSIVE */
+    /* ========================= */
 
     @media(max-width:1000px){
 
@@ -567,6 +820,24 @@
 
       .hero-text h1{
         font-size:55px;
+      }
+
+      .timeline::after{
+        left:31px;
+      }
+
+      .timeline-item{
+        width:100%;
+        padding-left:70px;
+        padding-right:25px;
+      }
+
+      .timeline-item::after{
+        left:18px;
+      }
+
+      .right{
+        left:0;
       }
 
       .nav-links{
@@ -590,7 +861,6 @@
     }
 
   </style>
-
 </head>
 
 <body>
@@ -598,9 +868,7 @@
   <!-- HEADER -->
 
   <header>
-
     <div class="container">
-
       <nav>
 
         <div class="logo">
@@ -608,19 +876,18 @@
         </div>
 
         <ul class="nav-links">
-
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#achievements">Achievements</a></li>
           <li><a href="#contact">Contact</a></li>
-
         </ul>
 
       </nav>
-
     </div>
-
   </header>
 
   <!-- HERO -->
@@ -647,76 +914,61 @@
         <p>
           Passionate about building scalable cloud infrastructures,
           automating CI/CD pipelines, securing applications and
-          implementing DevSecOps practices in cloud-native systems.
+          integrating DevSecOps practices into modern cloud-native systems.
         </p>
 
         <p>
           B.Tech Cyber Security Student (6th Semester) at
-          Parul University, Vadodara, Gujarat.
+          Parul University, Vadodara, Gujarat with strong hands-on
+          experience in Linux, Docker, Kubernetes, AWS, Terraform,
+          GitOps, Jenkins and Cloud Security.
         </p>
 
         <div class="hero-buttons">
-
           <a href="#projects" class="btn btn-primary">
-            View Projects
+            Explore Projects
           </a>
 
           <a href="#contact" class="btn btn-outline">
-            Contact Me
+            Hire Me
           </a>
-
         </div>
 
-        <!-- SOCIAL ICONS -->
-
         <div class="social-icons">
-
-          <a href="https://www.linkedin.com/in/yuankraj/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-
-          <a href="https://github.com/yuankraj" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-
-          <a href="https://www.instagram.com/yuank__raj/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-          <a href="mailto:yuankraj@gmail.com">
-            <i class="fas fa-envelope"></i>
-          </a>
-
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
 
       </div>
-
-      <!-- HERO CARD -->
 
       <div class="hero-card">
 
         <h2>#OPEN_TO_WORK</h2>
 
         <p>
-          Open for DevOps Engineer, AWS Engineer,
-          Cloud Engineer and DevSecOps roles.
+          Looking for opportunities in DevOps Engineering,
+          Cloud Infrastructure, AWS Administration, SRE,
+          Kubernetes Engineering and DevSecOps.
         </p>
 
         <p>
-          Focused on Kubernetes, Docker, CI/CD,
-          Infrastructure Automation, Monitoring and Cloud Security.
+          Focused on automation, security, scalability and
+          high-availability architectures using modern DevOps
+          tools and cloud-native technologies.
         </p>
 
         <div class="stat-grid">
 
           <div class="stat-box">
             <h3>15+</h3>
-            <p>Projects</p>
+            <p>Projects Completed</p>
           </div>
 
           <div class="stat-box">
             <h3>10+</h3>
-            <p>Tools</p>
+            <p>DevOps Tools</p>
           </div>
 
           <div class="stat-box">
@@ -726,7 +978,7 @@
 
           <div class="stat-box">
             <h3>100%</h3>
-            <p>Passion</p>
+            <p>Passion for Learning</p>
           </div>
 
         </div>
@@ -734,7 +986,6 @@
       </div>
 
     </div>
-
   </section>
 
   <!-- ABOUT -->
@@ -744,14 +995,12 @@
     <div class="container">
 
       <div class="section-title">
-
         <h2>About <span>Me</span></h2>
 
         <p>
-          Cybersecurity student passionate about DevOps,
-          Cloud Computing and Infrastructure Security.
+          A passionate cybersecurity and cloud enthusiast dedicated to
+          building secure, scalable and automated infrastructures.
         </p>
-
       </div>
 
       <div class="about-grid">
@@ -761,21 +1010,38 @@
           <h3>Cybersecurity + DevOps</h3>
 
           <p>
-            Started with Ethical Hacking and Penetration Testing,
-            then expanded into Cloud Engineering and DevOps to
-            understand scalable and secure infrastructures.
+            My journey started with Ethical Hacking and Penetration
+            Testing where I learned networking, Linux systems,
+            vulnerability analysis and attack-defense methodologies.
+          </p>
+
+          <br>
+
+          <p>
+            Over time, I expanded into DevOps and Cloud Engineering
+            to understand how modern infrastructures are deployed,
+            automated and secured in real-world environments.
           </p>
 
         </div>
 
         <div class="about-card">
 
-          <h3>Cloud Engineering</h3>
+          <h3>Cloud Engineering Vision</h3>
 
           <p>
-            Experienced with AWS services like EC2, S3,
-            IAM, VPC, Route53 and modern DevOps tools
-            including Docker, Kubernetes and Terraform.
+            I work extensively with AWS services such as EC2,
+            S3, IAM, VPC, Route53, CloudFront and modern DevOps
+            technologies including Docker, Kubernetes, Terraform,
+            Jenkins and ArgoCD.
+          </p>
+
+          <br>
+
+          <p>
+            My goal is to combine Cybersecurity expertise with
+            Cloud Engineering and DevOps practices to create
+            secure, resilient and scalable cloud architectures.
           </p>
 
         </div>
@@ -796,6 +1062,11 @@
 
         <h2>Technical <span>Skills</span></h2>
 
+        <p>
+          Technologies and tools I use for DevOps, Cloud,
+          Security and Infrastructure Automation.
+        </p>
+
       </div>
 
       <div class="skills-grid">
@@ -803,37 +1074,140 @@
         <div class="skill-card">
           <i class="fab fa-aws"></i>
           <h3>AWS Cloud</h3>
-          <p>EC2, S3, IAM, Route53, VPC, CloudFront</p>
+          <p>
+            EC2, S3, IAM, Route53, VPC, CloudFront,
+            Auto Scaling, Security Groups.
+          </p>
         </div>
 
         <div class="skill-card">
           <i class="fab fa-docker"></i>
           <h3>Docker</h3>
-          <p>Containerization, Compose, Multi-Tier Apps</p>
+          <p>
+            Containerization, Docker Compose,
+            Multi-Tier Applications, Health Checks.
+          </p>
         </div>
 
         <div class="skill-card">
           <i class="fas fa-network-wired"></i>
           <h3>Kubernetes</h3>
-          <p>Pods, Deployments, Services, Scaling</p>
+          <p>
+            Pods, Deployments, Services, Ingress,
+            Scaling and Cluster Management.
+          </p>
         </div>
 
         <div class="skill-card">
           <i class="fas fa-code-branch"></i>
           <h3>CI/CD</h3>
-          <p>GitHub Actions, Jenkins, GitLab CI/CD</p>
+          <p>
+            Jenkins, GitHub Actions, GitLab CI/CD,
+            Automation Pipelines.
+          </p>
         </div>
 
         <div class="skill-card">
           <i class="fas fa-server"></i>
           <h3>Terraform</h3>
-          <p>Infrastructure as Code & Automation</p>
+          <p>
+            Infrastructure as Code, Cloud Automation,
+            AWS Provisioning and Resource Management.
+          </p>
         </div>
 
         <div class="skill-card">
           <i class="fab fa-linux"></i>
           <h3>Linux</h3>
-          <p>Linux Administration & Shell Scripting</p>
+          <p>
+            Linux Administration, Shell Scripting,
+            Process Management and Security Hardening.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Cyber Security</h3>
+          <p>
+            Penetration Testing, VAPT,
+            Ethical Hacking, Network Security.
+          </p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Observability</h3>
+          <p>
+            Monitoring, Logging, Health Checks,
+            SRE Concepts and Reliability.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+
+  <section id="experience">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Professional <span>Experience</span></h2>
+
+        <p>
+          Hands-on experience in Cybersecurity,
+          DevOps and Infrastructure Security.
+        </p>
+
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item left">
+
+          <div class="timeline-content">
+
+            <h3>Cyber Security Specialist (Trainee)</h3>
+
+            <span>
+              EDUCONF Technologies Pvt Ltd • Dec 2021 – Apr 2023
+            </span>
+
+            <p>
+              Worked on Vulnerability Assessment, Ethical Hacking,
+              Network Security and Cyber Defense. Performed hands-on
+              security testing and gained strong practical knowledge
+              of Linux systems, security tools and networking concepts.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="timeline-item right">
+
+          <div class="timeline-content">
+
+            <h3>DevOps & Cloud Engineering Practice</h3>
+
+            <span>
+              Self Learning • 2024 – Present
+            </span>
+
+            <p>
+              Built real-world DevOps and Cloud projects using
+              Docker, Kubernetes, AWS, Terraform, GitOps and
+              CI/CD pipelines. Focused on automation,
+              cloud-native applications and secure infrastructure.
+            </p>
+
+          </div>
+
         </div>
 
       </div>
@@ -852,6 +1226,11 @@
 
         <h2>Featured <span>Projects</span></h2>
 
+        <p>
+          Real-world projects focused on automation,
+          DevOps, cloud infrastructure and security.
+        </p>
+
       </div>
 
       <div class="projects-grid">
@@ -861,16 +1240,16 @@
           <h3>GitOps E-Commerce Deployment</h3>
 
           <p>
-            Deployed an e-commerce application using
-            Kubernetes and ArgoCD on AWS EC2.
+            Deployed a complete e-commerce application using
+            Kubernetes and ArgoCD on AWS EC2 following
+            GitOps workflow and automated deployments.
           </p>
 
           <div class="tags">
-
             <span class="tag">Kubernetes</span>
             <span class="tag">ArgoCD</span>
             <span class="tag">AWS</span>
-
+            <span class="tag">GitOps</span>
           </div>
 
         </div>
@@ -880,16 +1259,15 @@
           <h3>CI/CD Pipeline Automation</h3>
 
           <p>
-            Automated deployments using GitLab CI/CD,
-            Docker and AWS EC2.
+            Designed automated CI/CD pipelines for Node.js
+            applications using GitLab Runner, Docker and AWS EC2
+            with automated deployment workflow.
           </p>
 
           <div class="tags">
-
             <span class="tag">GitLab CI/CD</span>
             <span class="tag">Docker</span>
-            <span class="tag">AWS</span>
-
+            <span class="tag">AWS EC2</span>
           </div>
 
         </div>
@@ -899,17 +1277,212 @@
           <h3>AI Multi-Tier Banking App</h3>
 
           <p>
-            Built AI banking application with frontend,
-            backend, database and Ollama integration.
+            Developed and deployed an AI-powered banking
+            application with frontend, backend, database and
+            Ollama LLM integration using Docker Compose.
           </p>
 
           <div class="tags">
-
             <span class="tag">Docker</span>
             <span class="tag">AI/LLM</span>
             <span class="tag">Ollama</span>
-
+            <span class="tag">Security</span>
           </div>
+
+        </div>
+
+        <div class="project-card">
+
+          <h3>DevSecOps Security Pipeline</h3>
+
+          <p>
+            Implemented security scanning, Docker hardening,
+            health checks and automated verification inside
+            CI/CD workflows following DevSecOps practices.
+          </p>
+
+          <div class="tags">
+            <span class="tag">DevSecOps</span>
+            <span class="tag">Docker</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Linux</span>
+          </div>
+
+        </div>
+
+        <div class="project-card">
+
+          <h3>Kubernetes Monitoring Stack</h3>
+
+          <p>
+            Configured monitoring and observability solutions
+            for containerized applications with logging,
+            metrics tracking and reliability monitoring.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Monitoring</span>
+            <span class="tag">Observability</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">SRE</span>
+          </div>
+
+        </div>
+
+        <div class="project-card">
+
+          <h3>Dockerized Flask + MySQL App</h3>
+
+          <p>
+            Built and deployed a Flask application connected
+            with MySQL using Docker Compose with container
+            networking and persistent storage.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Flask</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Docker Compose</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CERTIFICATIONS -->
+
+  <section id="certifications">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>My <span>Certifications</span></h2>
+
+        <p>
+          Industry certifications and cloud learning achievements.
+        </p>
+
+      </div>
+
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <i class="fas fa-certificate"></i>
+          <h3>OCI 2025 Certified DevOps Professional</h3>
+          <p>
+            Oracle Cloud Infrastructure DevOps certification
+            focused on automation and cloud-native deployment.
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <i class="fas fa-cloud"></i>
+          <h3>AWS Educate – Generative AI</h3>
+          <p>
+            Learned AI fundamentals, cloud AI services and
+            modern Generative AI concepts.
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <i class="fas fa-server"></i>
+          <h3>AWS Educate – Cloud 101</h3>
+          <p>
+            Strong understanding of cloud computing
+            and AWS cloud fundamentals.
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>ISO 27001 Lead Implementer</h3>
+          <p>
+            Information Security Management Systems,
+            Governance and Risk Management.
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <i class="fas fa-user-secret"></i>
+          <h3>Palo Alto Cybersecurity Foundation</h3>
+          <p>
+            Cybersecurity fundamentals, threat analysis
+            and modern security concepts.
+          </p>
+        </div>
+
+        <div class="cert-card">
+          <i class="fas fa-code"></i>
+          <h3>Certified DevOps Engineer Associate</h3>
+          <p>
+            Hands-on DevOps learning with Docker,
+            CI/CD, Kubernetes and automation.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+
+  <section id="achievements">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Achievements & <span>Highlights</span></h2>
+
+        <p>
+          Participation in national level competitions,
+          cybersecurity events and hackathons.
+        </p>
+
+      </div>
+
+      <div class="achievement-grid">
+
+        <div class="achievement-card">
+
+          <h3>KJSSE CTF 3.0</h3>
+
+          <p>
+            Participated in cybersecurity Capture The Flag
+            competition involving cryptography,
+            web exploitation, forensics and reverse engineering.
+          </p>
+
+        </div>
+
+        <div class="achievement-card">
+
+          <h3>CREST CTF 2026</h3>
+
+          <p>
+            Participated in national-level cybersecurity
+            competition focused on real-world attack
+            and defense challenges.
+          </p>
+
+        </div>
+
+        <div class="achievement-card">
+
+          <h3>ECHELON 2K26 Hackathon</h3>
+
+          <p>
+            Finalist in Cybersecurity × AI Hackathon
+            organized by SVNIT Surat focused on
+            innovation and security automation.
+          </p>
 
         </div>
 
@@ -930,91 +1503,46 @@
         <h2>Let's Connect</h2>
 
         <p>
-          Open for internships, freelance work and DevOps opportunities.
+          Open for internships, freelance opportunities,
+          DevOps roles and collaborative projects.
         </p>
 
         <div class="contact-info">
 
           <div class="contact-card">
-
             <i class="fas fa-user"></i>
-
             <h3>Name</h3>
-
             <p>Vishal Kumar</p>
-
           </div>
 
           <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location</h3>
+            <p>Vadodara, Gujarat, India</p>
+          </div>
 
+          <div class="contact-card">
+            <i class="fas fa-language"></i>
+            <h3>Languages</h3>
+            <p>English, Hindi</p>
+          </div>
+
+          <div class="contact-card">
             <i class="fab fa-linkedin"></i>
-
             <h3>LinkedIn</h3>
-
-            <p>
-              <a href="https://www.linkedin.com/in/yuankraj/" target="_blank">
-                linkedin.com/in/yuankraj
-              </a>
-            </p>
-
+            <p>linkedin.com/in/yuankraj</p>
           </div>
 
-          <div class="contact-card">
+        </div>
 
-            <i class="fab fa-github"></i>
+        <div class="hero-buttons" style="justify-content:center; margin-top:40px;">
+          <a href="#" class="btn btn-primary">
+            Download Resume
+          </a>
 
-            <h3>GitHub</h3>
-
-            <p>
-              <a href="https://github.com/yuankraj" target="_blank">
-                github.com/yuankraj
-              </a>
-            </p>
-
-          </div>
-
-          <div class="contact-card">
-
-            <i class="fab fa-instagram"></i>
-
-            <h3>Instagram</h3>
-
-            <p>
-              <a href="https://www.instagram.com/yuank__raj/" target="_blank">
-                @yuank__raj
-              </a>
-            </p>
-
-          </div>
-
-          <div class="contact-card">
-
-            <i class="fas fa-envelope"></i>
-
-            <h3>Email</h3>
-
-            <p>
-              <a href="mailto:yuankraj@gmail.com">
-                yuankraj@gmail.com
-              </a>
-            </p>
-
-          </div>
-
-          <div class="contact-card">
-
-            <i class="fas fa-phone"></i>
-
-            <h3>Phone</h3>
-
-            <p>
-              <a href="tel:+916204796484">
-                +91 6204796484
-              </a>
-            </p>
-
-          </div>
-
+          <a href="#" class="btn btn-outline">
+            Contact Me
+          </a>
         </div>
 
       </div>
@@ -1028,11 +1556,10 @@
   <footer>
 
     <p>
-      © 2026 Vishal Kumar • DevOps Engineer • Cloud Engineer
+      © 2026 Vishal Kumar • DevOps Engineer • Cloud Engineer • Cybersecurity Enthusiast
     </p>
 
   </footer>
 
 </body>
-
 </html>
