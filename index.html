@@ -1,157 +1,1046 @@
-<!-- SOCIAL ICONS -->
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="social-icons">
-  
-  <a href="https://www.linkedin.com/in/yuankraj/" target="_blank">
-    <i class="fab fa-linkedin"></i>
-  </a>
+<head>
 
-  <a href="https://github.com/yuankraj" target="_blank">
-    <i class="fab fa-github"></i>
-  </a>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <a href="https://www.instagram.com/yuank__raj/" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
+  <title>Vishal Kumar | DevOps Engineer Portfolio</title>
 
-  <a href="mailto:yuankraj@gmail.com">
-    <i class="fas fa-envelope"></i>
-  </a>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-</div>
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-<!-- CONTACT SECTION -->
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #050505;
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-<section class="contact" id="contact">
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-  <div class="container">
+    ul {
+      list-style: none;
+    }
 
-    <div class="contact-box">
+    .container {
+      width: 90%;
+      max-width: 1300px;
+      margin: auto;
+    }
 
-      <h2>Let's Connect</h2>
+    /* SCROLLBAR */
 
-      <p>
-        Open for internships, freelance opportunities,
-        DevOps roles and collaborative projects.
-      </p>
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-      <div class="contact-info">
+    ::-webkit-scrollbar-thumb {
+      background: #fff;
+      border-radius: 20px;
+    }
 
-        <div class="contact-card">
-          <i class="fas fa-user"></i>
-          <h3>Name</h3>
-          <p>Vishal Kumar</p>
+    /* ANIMATIONS */
+
+    @keyframes float {
+
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideTop {
+
+      from {
+        opacity: 0;
+        transform: translateY(80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideLeft {
+
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideRight {
+
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* HEADER */
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .logo span {
+      color: #bcbcbc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #c4c4c4;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-links a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to right, #000, #0d0d0d, #111);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      animation: float 6s infinite ease-in-out;
+    }
+
+    .circle1 {
+      width: 300px;
+      height: 300px;
+      top: 10%;
+      left: -5%;
+    }
+
+    .circle2 {
+      width: 250px;
+      height: 250px;
+      bottom: 5%;
+      right: -5%;
+      animation-delay: 2s;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 70px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-text {
+      animation: slideLeft 1s ease;
+    }
+
+    .hero-text h4 {
+      color: #cfcfcf;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 75px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      color: #d0d0d0;
+    }
+
+    .hero-text h3 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #bdbdbd;
+      font-weight: 500;
+    }
+
+    .hero-text p {
+      color: #a8a8a8;
+      line-height: 1.9;
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      border-radius: 12px;
+      border: 1px solid #fff;
+      font-weight: 600;
+      transition: 0.4s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline {
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* SOCIAL ICONS */
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .social-icons a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s;
+      font-size: 20px;
+    }
+
+    .social-icons a:hover {
+      background: #fff;
+      color: #000;
+      transform: translateY(-8px);
+    }
+
+    /* HERO CARD */
+
+    .hero-card {
+      background: #101010;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 40px;
+      border-radius: 25px;
+      animation: slideRight 1s ease;
+    }
+
+    .hero-card h2 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .hero-card p {
+      color: #b8b8b8;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .stat-box {
+      background: #0b0b0b;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .stat-box h3 {
+      font-size: 35px;
+    }
+
+    .stat-box p {
+      margin-top: 5px;
+      color: #9e9e9e;
+      font-size: 14px;
+    }
+
+    /* SECTION */
+
+    section {
+      padding: 120px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 70px;
+      animation: slideTop 1s ease;
+    }
+
+    .section-title h2 {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .section-title span {
+      color: #d0d0d0;
+    }
+
+    .section-title p {
+      color: #9c9c9c;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #0a0a0a;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .about-card {
+      background: #101010;
+      border-radius: 25px;
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: 0.4s;
+    }
+
+    .about-card:hover {
+      transform: translateY(-10px);
+      border-color: #fff;
+    }
+
+    .about-card h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .about-card p {
+      color: #b3b3b3;
+      line-height: 1.9;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-card {
+      background: #111;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: 0.4s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      border-color: #fff;
+    }
+
+    .skill-card i {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .skill-card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .skill-card p {
+      color: #b5b5b5;
+      line-height: 1.8;
+    }
+
+    /* PROJECTS */
+
+    .projects {
+      background: #0b0b0b;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #111;
+      border-radius: 25px;
+      padding: 35px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: 0.4s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      border-color: #fff;
+    }
+
+    .project-card h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .project-card p {
+      color: #b5b5b5;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 8px 14px;
+      background: #1a1a1a;
+      border-radius: 30px;
+      border: 1px solid #2a2a2a;
+      font-size: 13px;
+      color: #d7d7d7;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #080808;
+    }
+
+    .contact-box {
+      background: #101010;
+      padding: 60px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      color: #bdbdbd;
+      line-height: 1.9;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .contact-card {
+      background: #111;
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-card i {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #000;
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    footer p {
+      color: #888;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1000px) {
+
+      .hero-content,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text h1 {
+        font-size: 55px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media(max-width:600px) {
+
+      .hero-text h1 {
+        font-size: 42px;
+      }
+
+      .section-title h2 {
+        font-size: 38px;
+      }
+
+      .contact-box {
+        padding: 35px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="container">
+
+      <nav>
+
+        <div class="logo">
+          Vishal<span>.</span>
         </div>
 
-        <div class="contact-card">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Location</h3>
-          <p>Vadodara, Gujarat, India</p>
+        <ul class="nav-links">
+
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <h4>HELLO, I'M</h4>
+
+        <h1>
+          Vishal <span>Kumar</span>
+        </h1>
+
+        <h3>
+          DevOps Engineer • Cloud Engineer • Cybersecurity Enthusiast
+        </h3>
+
+        <p>
+          Passionate about building scalable cloud infrastructures,
+          automating CI/CD pipelines, securing applications and
+          implementing DevSecOps practices in cloud-native systems.
+        </p>
+
+        <p>
+          B.Tech Cyber Security Student (6th Semester) at
+          Parul University, Vadodara, Gujarat.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#projects" class="btn btn-primary">
+            View Projects
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            Contact Me
+          </a>
+
         </div>
 
-        <div class="contact-card">
-          <i class="fas fa-language"></i>
-          <h3>Languages</h3>
-          <p>English, Hindi</p>
-        </div>
+        <!-- SOCIAL ICONS -->
 
-        <div class="contact-card">
-          <i class="fab fa-linkedin"></i>
-          <h3>LinkedIn</h3>
+        <div class="social-icons">
 
-          <p>
-            <a 
-              href="https://www.linkedin.com/in/yuankraj/" 
-              target="_blank"
-              style="color:#fff;"
-            >
-              linkedin.com/in/yuankraj
-            </a>
-          </p>
-        </div>
+          <a href="https://www.linkedin.com/in/yuankraj/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
 
-        <div class="contact-card">
-          <i class="fab fa-github"></i>
-          <h3>GitHub</h3>
+          <a href="https://github.com/yuankraj" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
 
-          <p>
-            <a 
-              href="https://github.com/yuankraj" 
-              target="_blank"
-              style="color:#fff;"
-            >
-              github.com/yuankraj
-            </a>
-          </p>
-        </div>
+          <a href="https://www.instagram.com/yuank__raj/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
 
-        <div class="contact-card">
-          <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
+          <a href="mailto:yuankraj@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
 
-          <p>
-            <a 
-              href="mailto:yuankraj@gmail.com"
-              style="color:#fff;"
-            >
-              yuankraj@gmail.com
-            </a>
-          </p>
-        </div>
-
-        <div class="contact-card">
-          <i class="fas fa-phone"></i>
-          <h3>Phone</h3>
-
-          <p>
-            <a 
-              href="tel:+916204796484"
-              style="color:#fff;"
-            >
-              +91 6204796484
-            </a>
-          </p>
-        </div>
-
-        <div class="contact-card">
-          <i class="fab fa-instagram"></i>
-          <h3>Instagram</h3>
-
-          <p>
-            <a 
-              href="https://www.instagram.com/yuank__raj/" 
-              target="_blank"
-              style="color:#fff;"
-            >
-              @yuank__raj
-            </a>
-          </p>
         </div>
 
       </div>
 
-      <div class="hero-buttons" style="justify-content:center; margin-top:40px;">
+      <!-- HERO CARD -->
 
-        <a 
-          href="https://www.linkedin.com/in/yuankraj/" 
-          target="_blank"
-          class="btn btn-primary"
-        >
-          Connect on LinkedIn
-        </a>
+      <div class="hero-card">
 
-        <a 
-          href="mailto:yuankraj@gmail.com"
-          class="btn btn-outline"
-        >
-          Send Email
-        </a>
+        <h2>#OPEN_TO_WORK</h2>
+
+        <p>
+          Open for DevOps Engineer, AWS Engineer,
+          Cloud Engineer and DevSecOps roles.
+        </p>
+
+        <p>
+          Focused on Kubernetes, Docker, CI/CD,
+          Infrastructure Automation, Monitoring and Cloud Security.
+        </p>
+
+        <div class="stat-grid">
+
+          <div class="stat-box">
+            <h3>15+</h3>
+            <p>Projects</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>10+</h3>
+            <p>Tools</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>5+</h3>
+            <p>Certifications</p>
+          </div>
+
+          <div class="stat-box">
+            <h3>100%</h3>
+            <p>Passion</p>
+          </div>
+
+        </div>
 
       </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>About <span>Me</span></h2>
+
+        <p>
+          Cybersecurity student passionate about DevOps,
+          Cloud Computing and Infrastructure Security.
+        </p>
+
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+
+          <h3>Cybersecurity + DevOps</h3>
+
+          <p>
+            Started with Ethical Hacking and Penetration Testing,
+            then expanded into Cloud Engineering and DevOps to
+            understand scalable and secure infrastructures.
+          </p>
+
+        </div>
+
+        <div class="about-card">
+
+          <h3>Cloud Engineering</h3>
+
+          <p>
+            Experienced with AWS services like EC2, S3,
+            IAM, VPC, Route53 and modern DevOps tools
+            including Docker, Kubernetes and Terraform.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Technical <span>Skills</span></h2>
+
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <i class="fab fa-aws"></i>
+          <h3>AWS Cloud</h3>
+          <p>EC2, S3, IAM, Route53, VPC, CloudFront</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-docker"></i>
+          <h3>Docker</h3>
+          <p>Containerization, Compose, Multi-Tier Apps</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-network-wired"></i>
+          <h3>Kubernetes</h3>
+          <p>Pods, Deployments, Services, Scaling</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-code-branch"></i>
+          <h3>CI/CD</h3>
+          <p>GitHub Actions, Jenkins, GitLab CI/CD</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fas fa-server"></i>
+          <h3>Terraform</h3>
+          <p>Infrastructure as Code & Automation</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-linux"></i>
+          <h3>Linux</h3>
+          <p>Linux Administration & Shell Scripting</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="projects" id="projects">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Featured <span>Projects</span></h2>
+
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+
+          <h3>GitOps E-Commerce Deployment</h3>
+
+          <p>
+            Deployed an e-commerce application using
+            Kubernetes and ArgoCD on AWS EC2.
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">Kubernetes</span>
+            <span class="tag">ArgoCD</span>
+            <span class="tag">AWS</span>
+
+          </div>
+
+        </div>
+
+        <div class="project-card">
+
+          <h3>CI/CD Pipeline Automation</h3>
+
+          <p>
+            Automated deployments using GitLab CI/CD,
+            Docker and AWS EC2.
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">GitLab CI/CD</span>
+            <span class="tag">Docker</span>
+            <span class="tag">AWS</span>
+
+          </div>
+
+        </div>
+
+        <div class="project-card">
+
+          <h3>AI Multi-Tier Banking App</h3>
+
+          <p>
+            Built AI banking application with frontend,
+            backend, database and Ollama integration.
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">Docker</span>
+            <span class="tag">AI/LLM</span>
+            <span class="tag">Ollama</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+          Open for internships, freelance work and DevOps opportunities.
+        </p>
+
+        <div class="contact-info">
+
+          <div class="contact-card">
+
+            <i class="fas fa-user"></i>
+
+            <h3>Name</h3>
+
+            <p>Vishal Kumar</p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <i class="fab fa-linkedin"></i>
+
+            <h3>LinkedIn</h3>
+
+            <p>
+              <a href="https://www.linkedin.com/in/yuankraj/" target="_blank">
+                linkedin.com/in/yuankraj
+              </a>
+            </p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <i class="fab fa-github"></i>
+
+            <h3>GitHub</h3>
+
+            <p>
+              <a href="https://github.com/yuankraj" target="_blank">
+                github.com/yuankraj
+              </a>
+            </p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <i class="fab fa-instagram"></i>
+
+            <h3>Instagram</h3>
+
+            <p>
+              <a href="https://www.instagram.com/yuank__raj/" target="_blank">
+                @yuank__raj
+              </a>
+            </p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <i class="fas fa-envelope"></i>
+
+            <h3>Email</h3>
+
+            <p>
+              <a href="mailto:yuankraj@gmail.com">
+                yuankraj@gmail.com
+              </a>
+            </p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <i class="fas fa-phone"></i>
+
+            <h3>Phone</h3>
+
+            <p>
+              <a href="tel:+916204796484">
+                +91 6204796484
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Vishal Kumar • DevOps Engineer • Cloud Engineer
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
